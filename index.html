@@ -1,3 +1,4 @@
+<!DOCTYPE2 html>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -24,12 +25,13 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         nav ul li {
             margin: 5px;
+            position: relative;
         }
 
         nav ul li a {
@@ -38,6 +40,7 @@
             font-weight: bold;
             padding: 10px 15px;
             transition: color 0.3s, background-color 0.3s;
+            display: block;
         }
 
         nav ul li a:hover {
@@ -100,6 +103,7 @@
             text-decoration: underline;
         }
 
+        /* Responsivo */
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
@@ -111,13 +115,13 @@
             }
         }
 
-        /* Adicionando estilos específicos para a nova página "Sobre" */
-        .content {
-            padding: 20px;
-            margin: 20px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Seção expandida */
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
         }
     </style>
 </head>
@@ -133,7 +137,7 @@
                 <li><a href="#impostos">Impostos</a></li>
                 <li><a href="#cadastro-bens">Cadastro de Bens</a></li>
                 <li><a href="#novidades">Novidades</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#sobre" onclick="toggleSobre()">Sobre</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -142,7 +146,7 @@
     <section id="home" class="intro">
         <h1>Bem-vindo ao MicroFinance</h1>
         <p>Sua ferramenta completa para gerenciar suas finanças pessoais de forma eficiente e intuitiva.</p>
-        <a href="sobre.html">Saiba mais sobre nós</a>
+        <a href="#sobre" onclick="toggleSobre()">Saiba mais sobre nós</a>
     </section>
 
     <section id="planilhas-contas">
@@ -180,6 +184,20 @@
         <p>Fique por dentro das últimas atualizações e funcionalidades do MicroFinance.</p>
     </section>
 
+    <section id="sobre" class="hidden">
+        <h2>Sobre o MicroFinance</h2>
+        <p>O MicroFinance é uma plataforma projetada para ajudar você a gerenciar suas finanças pessoais de maneira eficiente. Com funcionalidades como planilhas de contas, controle de gastos, receitas, investimentos e muito mais, nosso objetivo é fornecer uma solução completa para suas necessidades financeiras.</p>
+        <p><strong>Benefícios</strong></p>
+        <ul>
+            <li>Organização centralizada das suas finanças.</li>
+            <li>Visualização clara de seus gastos e receitas.</li>
+            <li>Ferramentas avançadas para gerenciar investimentos e impostos.</li>
+            <li>Interface amigável e intuitiva.</li>
+        </ul>
+        <p><strong>Animações e Interatividade</strong></p>
+        <p>Nossa plataforma também inclui animações suaves para melhorar a experiência do usuário, com transições de menu e feedback visual para ações importantes.</p>
+    </section>
+
     <section id="contato">
         <h2>Contato</h2>
         <p>Entre em contato conosco para mais informações ou suporte.</p>
@@ -189,6 +207,18 @@
         <p>&copy; 2024 MicroFinance. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        function toggleSobre() {
+            var section = document.getElementById('sobre');
+            if (section.classList.contains('hidden')) {
+                section.classList.remove('hidden');
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
+                section.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
+

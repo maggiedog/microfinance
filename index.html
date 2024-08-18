@@ -5,6 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MicroFinance - Gestão de Finanças Pessoais</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #007bff;
+            padding: 10px 0;
+            box-shadow: 0 4px 2px -2px gray;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        nav ul li a::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 0;
+            background-color: white;
+            transition: width 0.3s;
+            margin-top: 5px;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #007bff;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,7 +96,9 @@
                 <li><a href="#investimentos">Investimentos</a></li>
                 <li><a href="#impostos">Impostos</a></li>
                 <li><a href="#cadastro-bens">Cadastro de Bens</a></li>
+                <li><a href="#novidades">Novidades</a></li>
                 <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -30,46 +111,49 @@
     <section id="planilhas-contas">
         <h2>Planilhas de Contas</h2>
         <p>Organize todas as suas contas em um só lugar.</p>
-        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
     <section id="gastos">
         <h2>Gastos</h2>
         <p>Acompanhe todos os seus gastos diários e mensais.</p>
-        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
     <section id="receitas">
         <h2>Receitas</h2>
         <p>Controle todas as suas fontes de receita.</p>
-        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
     <section id="investimentos">
         <h2>Investimentos</h2>
         <p>Acompanhe seus investimentos e veja seu dinheiro crescer.</p>
-        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
     <section id="impostos">
         <h2>Impostos</h2>
         <p>Gerencie o pagamento de impostos e fique em dia com o governo.</p>
-        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
     <section id="cadastro-bens">
         <h2>Cadastro de Bens</h2>
         <p>Registre todos os seus bens e patrimônios.</p>
-        <!-- Conteúdo adicional será adicionado aqui -->
+    </section>
+
+    <section id="novidades">
+        <h2>Novidades</h2>
+        <p>Fique por dentro das últimas atualizações e funcionalidades do MicroFinance.</p>
     </section>
 
     <section id="sobre">
         <h2>Sobre o MicroFinance</h2>
         <p>Saiba mais sobre o nosso projeto e como ele pode te ajudar.</p>
-        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
-    <footer style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #f8f8f8; padding: 10px 0; text-align: center;">
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para mais informações ou suporte.</p>
+    </section>
+
+    <footer>
         <p>&copy; 2024 MicroFinance. Todos os direitos reservados.</p>
     </footer>
 

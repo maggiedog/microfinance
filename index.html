@@ -1,5 +1,3 @@
-<!-- Este é um comentário em HTML -->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,7 +14,7 @@
         }
 
         header {
-            background-color: #007bff;
+            background-color: #28a745; /* Cor verde */
             padding: 10px 0;
             box-shadow: 0 4px 2px -2px gray;
         }
@@ -43,7 +41,7 @@
         }
 
         nav ul li a:hover {
-            color: #007bff;
+            color: #28a745; /* Cor verde */
             background-color: white;
             border-radius: 5px;
         }
@@ -71,7 +69,7 @@
         }
 
         h1, h2 {
-            color: #007bff;
+            color: #28a745; /* Cor verde */
         }
 
         footer {
@@ -79,11 +77,27 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #007bff;
+            background-color: #28a745; /* Cor verde */
             padding: 10px 0;
             text-align: center;
             color: white;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .intro a {
+            color: #28a745; /* Cor verde */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .intro a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -105,9 +119,10 @@
         </nav>
     </header>
 
-    <section id="home">
+    <section id="home" class="intro">
         <h1>Bem-vindo ao MicroFinance</h1>
         <p>Sua ferramenta completa para gerenciar suas finanças pessoais de forma eficiente e intuitiva.</p>
+        <a href="#sobre">Saiba mais sobre nós</a>
     </section>
 
     <section id="planilhas-contas">
@@ -147,7 +162,16 @@
 
     <section id="sobre">
         <h2>Sobre o MicroFinance</h2>
-        <p>Saiba mais sobre o nosso projeto e como ele pode te ajudar.</p>
+        <p>O MicroFinance é uma plataforma projetada para ajudar você a gerenciar suas finanças pessoais de maneira eficiente. Com funcionalidades como planilhas de contas, controle de gastos, receitas, investimentos e muito mais, nosso objetivo é fornecer uma solução completa para suas necessidades financeiras.</p>
+        <p>**Benefícios**</p>
+        <ul>
+            <li>Organização centralizada das suas finanças.</li>
+            <li>Visualização clara de seus gastos e receitas.</li>
+            <li>Ferramentas avançadas para gerenciar investimentos e impostos.</li>
+            <li>Interface amigável e intuitiva.</li>
+        </ul>
+        <p>**Animações e Interatividade**</p>
+        <p>Nossa plataforma também inclui animações suaves para melhorar a experiência do usuário, com transições de menu e feedback visual para ações importantes.</p>
     </section>
 
     <section id="contato">

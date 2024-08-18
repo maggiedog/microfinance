@@ -1,4 +1,3 @@
-<!DOCTYPE2 html>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,126 +6,83 @@
     <title>MicroFinance - Gestão de Finanças Pessoais</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Adicione aqui estilos específicos para o site */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         header {
             background-color: #28a745; /* Cor verde */
             padding: 10px 0;
-            box-shadow: 0 4px 2px -2px gray;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
         }
 
         nav ul {
             list-style: none;
-            margin: 0;
             padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            margin: 0;
+            text-align: center;
         }
 
         nav ul li {
-            margin: 5px;
-            position: relative;
+            display: inline;
+            margin: 0 10px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
-            padding: 10px 15px;
-            transition: color 0.3s, background-color 0.3s;
-            display: block;
         }
 
         nav ul li a:hover {
-            color: #28a745; /* Cor verde */
-            background-color: white;
-            border-radius: 5px;
-        }
-
-        nav ul li a::after {
-            content: '';
-            display: block;
-            height: 3px;
-            width: 0;
-            background-color: white;
-            transition: width 0.3s;
-            margin-top: 5px;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
+            text-decoration: underline;
         }
 
         section {
             padding: 20px;
             margin: 20px;
             background-color: white;
-            border-radius: 5px;
+            border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2 {
-            color: #28a745; /* Cor verde */
-        }
-
         footer {
+            background-color: #28a745; /* Cor verde */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #28a745; /* Cor verde */
-            padding: 10px 0;
-            text-align: center;
-            color: white;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .intro {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .intro a {
-            color: #28a745; /* Cor verde */
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        .intro a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsivo */
         @media (max-width: 768px) {
             nav ul {
-                flex-direction: column;
-                align-items: center;
+                text-align: left;
             }
 
             nav ul li {
+                display: block;
                 margin: 10px 0;
             }
-        }
-
-        /* Seção expandida */
-        .hidden {
-            display: none;
-        }
-
-        .visible {
-            display: block;
         }
     </style>
 </head>
 <body>
     <header>
+        <h1>MicroFinance</h1>
         <nav>
             <ul>
                 <li><a href="#home">Início</a></li>
@@ -136,89 +92,56 @@
                 <li><a href="#investimentos">Investimentos</a></li>
                 <li><a href="#impostos">Impostos</a></li>
                 <li><a href="#cadastro-bens">Cadastro de Bens</a></li>
-                <li><a href="#novidades">Novidades</a></li>
-                <li><a href="#sobre" onclick="toggleSobre()">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="intro">
+    <section id="home">
         <h1>Bem-vindo ao MicroFinance</h1>
         <p>Sua ferramenta completa para gerenciar suas finanças pessoais de forma eficiente e intuitiva.</p>
-        <a href="#sobre" onclick="toggleSobre()">Saiba mais sobre nós</a>
     </section>
 
     <section id="planilhas-contas">
         <h2>Planilhas de Contas</h2>
         <p>Organize todas as suas contas em um só lugar.</p>
+        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
     <section id="gastos">
         <h2>Gastos</h2>
         <p>Acompanhe todos os seus gastos diários e mensais.</p>
+        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
     <section id="receitas">
         <h2>Receitas</h2>
         <p>Controle todas as suas fontes de receita.</p>
+        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
     <section id="investimentos">
         <h2>Investimentos</h2>
         <p>Acompanhe seus investimentos e veja seu dinheiro crescer.</p>
+        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
     <section id="impostos">
         <h2>Impostos</h2>
         <p>Gerencie o pagamento de impostos e fique em dia com o governo.</p>
+        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
     <section id="cadastro-bens">
         <h2>Cadastro de Bens</h2>
         <p>Registre todos os seus bens e patrimônios.</p>
-    </section>
-
-    <section id="novidades">
-        <h2>Novidades</h2>
-        <p>Fique por dentro das últimas atualizações e funcionalidades do MicroFinance.</p>
-    </section>
-
-    <section id="sobre" class="hidden">
-        <h2>Sobre o MicroFinance</h2>
-        <p>O MicroFinance é uma plataforma projetada para ajudar você a gerenciar suas finanças pessoais de maneira eficiente. Com funcionalidades como planilhas de contas, controle de gastos, receitas, investimentos e muito mais, nosso objetivo é fornecer uma solução completa para suas necessidades financeiras.</p>
-        <p><strong>Benefícios</strong></p>
-        <ul>
-            <li>Organização centralizada das suas finanças.</li>
-            <li>Visualização clara de seus gastos e receitas.</li>
-            <li>Ferramentas avançadas para gerenciar investimentos e impostos.</li>
-            <li>Interface amigável e intuitiva.</li>
-        </ul>
-        <p><strong>Animações e Interatividade</strong></p>
-        <p>Nossa plataforma também inclui animações suaves para melhorar a experiência do usuário, com transições de menu e feedback visual para ações importantes.</p>
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Entre em contato conosco para mais informações ou suporte.</p>
+        <!-- Conteúdo adicional será adicionado aqui -->
     </section>
 
     <footer>
         <p>&copy; 2024 MicroFinance. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        function toggleSobre() {
-            var section = document.getElementById('sobre');
-            if (section.classList.contains('hidden')) {
-                section.classList.remove('hidden');
-                section.classList.add('visible');
-            } else {
-                section.classList.remove('visible');
-                section.classList.add('hidden');
-            }
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
-

@@ -63,7 +63,7 @@ canvas {
     border: 1px solid black;
     display: block;
     margin: 0 auto;
-    background-color: #000; /* Fundo preto */
+    background-color: #fff; /* Fundo branco */
 }
 
 /* Títulos */

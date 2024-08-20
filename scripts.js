@@ -3,7 +3,6 @@ const ctx = canvas.getContext('2d');
 
 const symbols = [];
 const numSymbols = 100;
-let hue = 0; // Cor inicial
 
 // Função para gerar uma cor HSL aleatória
 function randomColor() {
@@ -63,32 +62,22 @@ function drawText() {
     ctx.translate(canvas.width / 2, canvas.height / 2); // Translada o canvas para o centro
 
     // Configuração do texto "MICRO"
-    ctx.font = 'bold 156px Arial'; // Tamanho do texto "MICRO"
+    ctx.font = 'bold 100px Arial'; // Tamanho reduzido para "MICRO"
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
-    // Cria um efeito de sombra para simular 3D
-    for (let i = 0; i < 10; i++) {
-        ctx.fillStyle = `hsl(${(hue + i * 10) % 360}, 100%, 50%)`;
-        ctx.fillText('MICRO', i, i - 50);
-    }
-
+    // Muda a cor do texto automaticamente
+    const hue = (Date.now() % 360); // Cor que muda com o tempo
     ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
-    ctx.fillText('MICRO', 0, -50);
+
+    ctx.fillText('MICRO', 0, -30); // Ajusta a posição
 
     // Configuração do texto "FINANCE"
-    ctx.font = 'bold 120px Arial'; // Tamanho do texto "FINANCE"
+    ctx.font = 'bold 80px Arial'; // Tamanho reduzido para "FINANCE"
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
-    // Cria um efeito de sombra para simular 3D
-    for (let i = 0; i < 10; i++) {
-        ctx.fillStyle = `hsl(${(hue + i * 10) % 360}, 100%, 50%)`;
-        ctx.fillText('FINANCE', i, i + 60);
-    }
-
-    ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
-    ctx.fillText('FINANCE', 0, 60);
+    ctx.fillText('FINANCE', 0, 50); // Ajusta a posição
 
     ctx.restore();
 }

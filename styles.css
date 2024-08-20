@@ -56,7 +56,9 @@ section {
     display: inline-block;
     margin: 20px 0;
     position: relative;
-    width: 100%;
+    width: 30%; /* Ajuste o tamanho conforme necessário */
+    max-width: 800px; /* Defina um tamanho máximo para o canvas */
+    height: auto; /* Permite ajuste automático da altura */
 }
 
 canvas {

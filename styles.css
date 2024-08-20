@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Definições gerais */
 body {
     font-family: Arial, sans-serif;
@@ -7,8 +5,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    overflow-x: hidden; /* Evita barras de rolagem horizontais */
 }
 
+/* Estilos do cabeçalho e navegação */
 header {
     background-color: #2a9d8f;
     padding: 10px 0;
@@ -43,12 +43,26 @@ section {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto */
 }
 
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation-container {
+    margin: 20px 0; /* Adiciona um espaço em torno da animação */
+}
+
+/* Estilos dos títulos */
 h1, h2 {
     color: #2a9d8f;
 }
 
+/* Estilos do rodapé */
 footer {
     background-color: #264653;
     color: white;
@@ -57,19 +71,4 @@ footer {
     position: absolute;
     width: 100%;
     bottom: 0;
-}
-
-/* Estilos específicos para o canvas */
-#canvas-container {
-    text-align: center; /* Centraliza o canvas horizontalmente */
-    padding: 20px; /* Adiciona espaçamento ao redor do canvas */
-}
-
-canvas {
-    border: 1px solid black;
-    display: block; /* Garante que o canvas se comporte como um bloco */
-    margin: 0 auto; /* Centraliza o canvas dentro do container */
-    background-color: #000; /* Fundo preto */
-    max-width: 100%; /* Garante que o canvas não exceda a largura da tela */
-    height: auto; /* Ajusta a altura automaticamente com base na largura */
 }

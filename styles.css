@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* Definições gerais */
 body {
     font-family: Arial, sans-serif;
@@ -5,10 +7,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-    overflow-x: hidden; /* Evita barras de rolagem horizontais */
 }
 
-/* Estilos do cabeçalho e navegação */
+/* Cabeçalho */
 header {
     background-color: #2a9d8f;
     padding: 10px 0;
@@ -36,39 +37,47 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para as seções */
+/* Seções */
 section {
     padding: 20px;
     margin: 10px 0;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centraliza o texto */
 }
 
+/* Seção inicial */
 .intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    padding: 20px;
 }
 
 .animation-container {
-    margin: 20px 0; /* Adiciona um espaço em torno da animação */
+    display: inline-block;
+    margin: 20px 0;
+    position: relative;
+    width: 100%;
 }
 
-/* Estilos dos títulos */
+canvas {
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+    background-color: #000; /* Fundo preto */
+}
+
+/* Títulos */
 h1, h2 {
     color: #2a9d8f;
 }
 
-/* Estilos do rodapé */
+/* Rodapé */
 footer {
     background-color: #264653;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
+    position: relative;
     width: 100%;
     bottom: 0;
 }

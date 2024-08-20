@@ -87,13 +87,10 @@ function drawText() {
         ctx.fillText('FINANCE', i, i + 60);
     }
 
-    ctx.fillStyle = `hsl(${(hue + 180) % 360}, 100%, 50%)`;
+    ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
     ctx.fillText('FINANCE', 0, 60);
 
     ctx.restore();
-
-    // Incrementa o hue para mudar a cor gradualmente
-    hue = (hue + 1) % 360;
 }
 
 // Função para animar os símbolos e atualizar o texto
